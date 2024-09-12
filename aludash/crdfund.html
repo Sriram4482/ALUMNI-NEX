@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Crowdfunding Dashboard</title>
+    <link rel="stylesheet" href="crdfund.css">
+</head>
+<body>
+    <div class="crowdfunding-container">
+        <h1>Crowdfunding Dashboard</h1>
+
+        <!-- Create Campaign Form -->
+        <section class="create-campaign">
+            <h2>Create a New Campaign</h2>
+            <form id="campaignForm">
+                <label for="title">Campaign Title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+                <label for="goal">Funding Goal ($):</label>
+                <input type="number" id="goal" name="goal" required>
+                <label for="deadline">Deadline:</label>
+                <input type="date" id="deadline" name="deadline" required>
+                <button type="submit">Create Campaign</button>
+            </form>
+        </section>
+
+        <!-- Active Campaigns -->
+        <section class="campaigns">
+            <h2>Active Campaigns</h2>
+            <div id="campaignList">
+                <!-- Campaigns will be dynamically inserted here -->
+                <div class="campaign">
+                    <h3>Build a New Library</h3>
+                    <p>Help us raise funds to build a new library for the college.</p>
+                    <div class="progress">
+                        <div class="bar" style="width: 50%;"></div>
+                    </div>
+                    <p>$5,000 of $10,000 raised</p>
+                    <button onclick="viewCampaign('Build a New Library')">View Details</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="crdfund.js"></script>
+</body>
+</html>

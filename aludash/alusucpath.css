@@ -1,0 +1,152 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('sucess.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 0%;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.success-path-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #b6b1b19d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.timeline, .career-path, .success-stories, .awards, .cta {
+    margin-bottom: 40px;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.timeline-date {
+    flex: 0 0 100px;
+    font-weight: bold;
+    color: #1c2a79;
+}
+
+.timeline-content h3 {
+    margin: 0 0 5px;
+}
+
+.path-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.path-item {
+    flex: 1;
+    padding: 10px;
+    background-color: #3c91b3;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.path-item:last-child {
+    margin-right: 0;
+}
+
+.path-item:hover {
+    background-color: #0056b3;
+}
+
+.career-details {
+    padding: 15px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    display: none;
+}
+
+.story {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.awards ul {
+    padding-left: 20px;
+}
+
+.awards li {
+    margin-bottom: 10px;
+}
+
+.cta {
+    text-align: center;
+    padding: 20px;
+    background-color: #3c91b3;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.cta a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.cta a:hover {
+    text-decoration: none;
+}
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling within the container */
+    overflow-y: auto;   /* Allow vertical scrolling */
+    box-sizing: border-box;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('sucess.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 50px 20px; /* Adequate padding */
+    font-size: 24px;
+    max-width: 100%; /* Ensure content width stays within viewport */
+}
+
+img {
+    max-width: 100%; /* Ensure images do not cause overflow */
+    height: auto;
+}

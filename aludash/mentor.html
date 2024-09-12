@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Mentoring Dashboard</title>
+    <link rel="stylesheet" href="mentor.css">
+</head>
+<body>
+    <div class="mentoring-container">
+        <h1>Alumni Mentoring Dashboard</h1>
+
+        <!-- Mentor/Mentee Profile -->
+        <section class="profile">
+            <h2>Your Profile</h2>
+            <form id="profileForm">
+                <label for="role">I am a:</label>
+                <select id="role" name="role">
+                    <option value="mentor">Mentor</option>
+                    <option value="mentee">Mentee</option>
+                </select>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="expertise">Expertise/Field of Study:</label>
+                <input type="text" id="expertise" name="expertise" required>
+
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" required></textarea>
+
+                <label for="availability">Availability (Mentors only):</label>
+                <input type="text" id="availability" name="availability">
+
+                <label for="goals">Goals (Mentees only):</label>
+                <textarea id="goals" name="goals"></textarea>
+
+                <button type="submit">Save Profile</button>
+            </form>
+        </section>
+
+        <!-- Mentor/Mentee Matching -->
+        <section class="matching">
+            <h2>Find a Match</h2>
+            <button onclick="findMatch()">Find a Mentor/Mentee</button>
+            <div id="matchResult"></div>
+        </section>
+
+        <!-- Communication Tools -->
+        <section class="communication">
+            <h2>Communication</h2>
+            <textarea id="messageBox" placeholder="Write your message here..."></textarea>
+            <button onclick="sendMessage()">Send Message</button>
+            <div id="chatHistory"></div>
+        </section>
+
+        <!-- Goal Tracking -->
+        <section class="goals">
+            <h2>Goal Tracking</h2>
+            <p>Set and track your mentoring goals here:</p>
+            <input type="text" id="goalInput" placeholder="Enter a new goal">
+            <button onclick="addGoal()">Add Goal</button>
+            <ul id="goalList"></ul>
+        </section>
+    </div>
+
+    <script src="mentor.js"></script>
+</body>
+</html>

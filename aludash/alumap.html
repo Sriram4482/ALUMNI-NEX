@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Map</title>
+    <link rel="stylesheet" href="alumap.css">
+</head>
+<body>
+    <div class="map-container">
+        <div id="alumni-map" class="map"></div>
+    </div>
+
+    <div class="sidebar">
+        <div class="search-filter">
+            <input type="text" placeholder="Search by Location" id="search-location">
+            <select id="filter-criteria">
+                <option value="">Filter by Criteria</option>
+                <option value="graduation">Graduation Year</option>
+                <option value="industry">Industry</option>
+                <option value="job">Current Job Title</option>
+            </select>
+        </div>
+        
+        <div class="alumni-info">
+            <h2>Alumni Details</h2>
+            <div id="alumni-details">
+                <!-- Pop-up information will appear here -->
+            </div>
+        </div>
+        
+        <div class="events">
+            <h2>Upcoming Events</h2>
+            <ul id="event-list">
+                <!-- List of events will appear here -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Example alumni profile pop-up -->
+    <div id="profile-popup" class="popup">
+        <h3>John Doe</h3>
+        <p>Graduation Year: 2010</p>
+        <p>Current Job: Software Engineer</p>
+        <button>Message</button>
+    </div>
+
+    <!-- Example of an event -->
+    <div id="event-popup" class="popup">
+        <h3>Alumni Meetup</h3>
+        <p>Date: 25th Sept 2024</p>
+        <p>Location: New York</p>
+        <button>RSVP</button>
+    </div>
+
+    <script src="alumap.js"></script>
+</body>
+</html>

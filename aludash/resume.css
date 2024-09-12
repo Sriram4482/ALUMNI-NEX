@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3e3c3c; /* Fallback background color */
+    margin: 0;
+    padding: 0;
+    color: #0f1111;
+    position: relative; /* Required for absolute positioning of the pseudo-element */
+    overflow: hidden; /* Prevent overflow of the blurred background */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('resume.jpg'); /* Path to your background image */
+    background-size: cover; /* Make the background cover the entire screen */
+    background-attachment: fixed; /* Fix the background */
+    background-position: center; /* Center the background */
+    filter: blur(5px); /* Blur the background */
+    z-index: -1; /* Place behind other content */
+}
+
+.resume-builder-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(46, 83, 102, 0.437); /* Semi-transparent background for readability */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 80vh; /* Limit height for scrolling */
+    position: relative; /* Required for the blurred background overlay */
+}
+
+.builder-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.builder-header h1 {
+    font-size: 2.5em;
+    color: #0e0e0f;
+    margin-bottom: 10px;
+}
+
+.builder-header p {
+    font-size: 1.2em;
+    color: #131010;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 1.8em;
+    color: #0e0e0f;
+    border-bottom: 2px solid #0e0e0f;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.templates {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.template {
+    background-color: #e9ecef;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.template:hover {
+    background-color: #d6d6d6;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.skill-recommendations,
+.keyword-optimization,
+.action-verbs,
+.metric-suggestions,
+#feedback,
+#analytics {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    color: #0e0e0f;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #d6d6d6;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0e0e0f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0e0e0f;
+}
+
+#linkedin-integration button {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#download-export button {
+    margin-bottom: 10px;
+}

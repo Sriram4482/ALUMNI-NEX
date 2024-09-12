@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Networking Dashboard</title>
+    <link rel="stylesheet" href="alunet.css">
+</head>
+<body>
+    <div class="networking-container">
+        <h1>Alumni Networking Dashboard</h1>
+
+        <!-- Alumni Directory -->
+        <section class="directory">
+            <h2>Alumni Directory</h2>
+            <input type="text" id="searchInput" onkeyup="searchAlumni()" placeholder="Search alumni by name, industry, location...">
+            <div id="alumniList">
+                <!-- Alumni profiles will be dynamically inserted here -->
+                <div class="alumni-profile">
+                    <h3>John Doe</h3>
+                    <p>Software Engineer, San Francisco</p>
+                </div>
+                <div class="alumni-profile">
+                    <h3>Jane Smith</h3>
+                    <p>Marketing Director, New York</p>
+                </div>
+                <div class="alumni-profile">
+                    <h3>Mike Johnson</h3>
+                    <p>Entrepreneur, London</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Map -->
+        <section class="map">
+            <h2>Alumni Map</h2>
+            <div id="map"></div>
+        </section>
+
+        <!-- Groups and Communities -->
+        <section class="groups">
+            <h2>Groups & Communities</h2>
+            <div class="group">
+                <h3>Tech Innovators</h3>
+                <p>Join alumni in the tech industry to discuss the latest trends and collaborate on projects.</p>
+                <button onclick="joinGroup('Tech Innovators')">Join Group</button>
+            </div>
+            <div class="group">
+                <h3>Marketing Masters</h3>
+                <p>Connect with marketing professionals to share strategies and industry insights.</p>
+                <button onclick="joinGroup('Marketing Masters')">Join Group</button>
+            </div>
+            <div class="group">
+                <h3>Entrepreneurial Minds</h3>
+                <p>Share ideas and resources with fellow alumni entrepreneurs.</p>
+                <button onclick="joinGroup('Entrepreneurial Minds')">Join Group</button>
+            </div>
+        </section>
+
+        <!-- Mentorship Program -->
+        <section class="mentorship">
+            <h2>Mentorship Program</h2>
+            <p>Looking for guidance? Connect with experienced alumni mentors.</p>
+            <button onclick="requestMentorship()">Request a Mentor</button>
+        </section>
+    </div>
+
+    <script src="alunet.js"></script>
+</body>
+</html>

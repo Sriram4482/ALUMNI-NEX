@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Dashboard</title>
+    <link rel="stylesheet" href="aludash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Alumni Dashboard</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#overview"><i class="fas fa-tachometer-alt"></i> Overview</a></li>
+                    <li><a href="alumap.html"><i class="fas fa-map-marker-alt"></i> Alumni Map</a></li>
+                    <li><a href="alusucpath.html"><i class="fas fa-chart-line"></i> Success Path</a></li>
+                    <li><a href="alunet.html"><i class="fas fa-users"></i> Networking</a></li>
+                    <li><a href="crdfund.html"><i class="fas fa-fundraising"></i> Crowdfunding</a></li>
+                    <li><a href="mentor.html"><i class="fas fa-handshake"></i> Mentorship</a></li>
+                    <li><a href="opportunity.html"><i class="fas fa-globe"></i> Opportunities</a></li>
+                    <li><a href="event.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                    <li><a href="donation.html"><i class="fas fa-donate"></i> Donations</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <header class="content-header">
+                <h1>Welcome to the Alumni Dashboard</h1>
+                <div class="profile-section">
+                    <span class="user-name"></span>Vishnu<!-- Display the user's name -->
+                    <img src="profile.jpeg" alt="Profile Picture" class="profile-picture" id="profilePic">
+                    <div class="dropdown-menu" id="profileMenu">
+                        <ul>
+                            <li><a href="#profile-settings"><i class="fas fa-cog"></i> Settings</a></li>
+                            <li><a href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <section id="overview">
+                    <h2>Alumni Overview</h2>
+                    <div class="overview-section">
+                        <p>Here you can find a brief overview of our alumni, including achievements, connections, and contributions to the community.</p>
+                        <div class="overview-container">
+                            <ul>
+                                <li>Total Alumni: 500</li>
+                                <li>Successful Alumni: 200</li>
+                                <li>Active Alumni: 150</li>
+                                <li>Recent Events Attended: 30</li>
+                                <li>Total Donations: $50,000</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="aludash.js"></script>
+</body>
+</html>

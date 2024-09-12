@@ -1,0 +1,205 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Dashboard Wrapper */
+.dashboard-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: rgba(30, 42, 94, 0.9);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 100%;
+    position: relative;
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+    background-color: #55679C;
+    color: #E1D7B7;
+}
+
+.sidebar-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sidebar-nav ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar-nav ul li a {
+    color: #E1D7B7;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar-nav ul li a:hover {
+    background-color: #7C93C3;
+    color: #1E2A5E;
+}
+
+/* Content Area Styling */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.129); /* Optional: add a white overlay for better contrast */
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('mini.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px); /* Adjust the blur intensity */
+    z-index: -1; /* Ensure it stays behind other content */
+}
+
+.content-header {
+    background-color:#55679C; /* Slight transparency */
+    color: #E1D7B7;
+    padding: 20px;
+    text-align:left;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Profile Section Styling */
+.profile-section {
+    position: absolute;
+    top: 50px; /* Adjust to the desired vertical position */
+    right: 29px; /* Keep it on the right */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-name {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #E1D7B7;
+}
+
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px; /* Adjust the position based on your layout */
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu ul li a i {
+    margin-right: 10px;
+}
+
+.dropdown-menu ul li:last-child {
+    border-bottom: none;
+}
+
+/* Content Sections */
+.overview-section {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.251); /* Semi-transparent background */
+    border-radius: 8px;
+}
+
+.overview-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.overview-container ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f5f5f500;
+}
+
+.overview-container ul li:last-child {
+    border-bottom: none;
+}
+
+/* Ensure the full height of the content is covered */
+main {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .profile-section {
+        right: 10px;
+    }
+
+    .user-name {
+        font-size: 14px;
+    }
+
+    .profile-picture {
+        width: 40px;
+        height: 40px;
+    }
+
+    .dropdown-menu {
+        top: 50px;
+    }
+}

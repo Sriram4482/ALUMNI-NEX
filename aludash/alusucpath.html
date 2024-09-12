@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Success Path</title>
+    <link rel="stylesheet" href="alusucpath.css">
+</head>
+<body>
+    <div class="success-path-container">
+        <h1>Alumni Success Path</h1>
+
+        <!-- Timeline of Achievements -->
+        <section class="timeline">
+            <h2>Career Milestones</h2>
+            <div class="timeline-item">
+                <div class="timeline-date">2010</div>
+                <div class="timeline-content">
+                    <h3>Graduated with Honors</h3>
+                    <p>Received a Bachelor's degree in Computer Science.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2012</div>
+                <div class="timeline-content">
+                    <h3>Started as a Software Engineer at Infosys</h3>
+                    <p>Joined Infosys Corporation as a junior software engineer.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2018</div>
+                <div class="timeline-content">
+                    <h3>Promoted to Senior Developer</h3>
+                    <p>Recognized for leading a successful project launch.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2021</div>
+                <div class="timeline-content">
+                    <h3>Founded Tech Innovators</h3>
+                    <p>Launched a successful startup focusing on AI solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Career Path Visualization -->
+        <section class="career-path">
+            <h2>Interactive Career Path</h2>
+            <div class="path-container">
+                <div class="path-item" onclick="showCareerDetails('software-engineer')">
+                    <h3>Software Engineer</h3>
+                </div>
+                <div class="path-item" onclick="showCareerDetails('senior-developer')">
+                    <h3>Senior Developer</h3>
+                </div>
+                <div class="path-item" onclick="showCareerDetails('founder')">
+                    <h3>Founder & CEO</h3>
+                </div>
+            </div>
+            <div id="career-details" class="career-details">
+                <!-- Career details will be dynamically updated here -->
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section class="success-stories">
+            <h2>Success Stories</h2>
+            <div class="story">
+                <h3>Building a Tech Empire</h3>
+                <p>After years of experience, I decided to start my own company focused on AI...</p>
+            </div>
+            <div class="story">
+                <h3>From Coding to Leadership</h3>
+                <p>Transitioning from a developer to a leader was challenging but rewarding...</p>
+            </div>
+        </section>
+
+        <!-- Awards and Recognitions -->
+        <section class="awards">
+            <h2>Awards & Recognitions</h2>
+            <ul>
+                <li>Best Startup Award 2022</li>
+                <li>Innovator of the Year 2021</li>
+                <li>Top 30 Under 30 in Tech 2020</li>
+            </ul>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta">
+            <h2>Get Involved</h2>
+            <p>Interested in mentoring or sharing your own success story? <a href="#">Get in touch!</a></p>
+        </section>
+    </div>
+
+    <script src="alusucpath.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="stdash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for icons -->
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Side Navigation Bar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Student Dashboard</h2>
+            </div>
+            <nav class="sidebar-nav" id="sidebar-nav">
+                <ul>
+                    <li><a href="feed.html"><i class="fas fa-home"></i> Student Feed</a></li>
+                    <li><a href="future.html"><i class="fas fa-briefcase"></i> Career Path Suggestions</a></li>
+                    <li><a href="virtual.html"><i class="fas fa-laptop"></i> Virtual Internship Portal</a></li>
+                    <li><a href="tracer.html"><i class="fas fa-chart-line"></i> Skill Development Tracker</a></li>
+                    <li><a href="resume.html"><i class="fas fa-file-alt"></i> AI-Powered Resume Builder</a></li>
+                    <li><a href="collabaration.html"><i class="fas fa-users"></i> Peer Collaboration Hub</a></li>
+                    <li><a href="scholarship.html"><i class="fas fa-graduation-cap"></i> Scholarship Finder</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <header class="content-header">
+                <h1>Welcome to Student Dashboard</h1>
+                <div class="profile-section">
+                    <img src="profile.jpeg" alt="Profile Picture" class="profile-picture" id="profile-icon">
+                    <div class="profile-info">
+                        <h3>Vishnu</h3>
+                    </div>
+                    <div class="dropdown" id="profile-dropdown">
+                        <ul>
+                            <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                            <li><a href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Student Feed Section -->
+            <div id="feed" class="student-feed">
+                <h2>Latest Updates & Announcements</h2>
+                <div class="feed-item">
+                    <h3>New Internship Opportunities</h3>
+                    <p>Check out the latest virtual internship listings available through the platform.</p>
+                </div>
+                <div class="feed-item">
+                    <h3>Upcoming Webinar: AI in Education</h3>
+                    <p>Join us for an insightful webinar on how AI is transforming the education landscape.</p>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+
+    <script src="stdash.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Dashboard</title>
+    <link rel="stylesheet" href="university.css">
+    <style>
+        /* Add this CSS for the dropdown */
+        .profile-options {
+            display: none; /* Hidden by default */
+            position: absolute; /* Position it below the profile section */
+            right: 20px; /* Align to the right of the profile */
+            top: 60px; /* Adjust based on the height of the header */
+            background-color: white; /* Background color for dropdown */
+            border: 1px solid #ccc; /* Border for dropdown */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+            z-index: 10; /* Ensure it appears above other elements */
+        }
+
+        .profile-options a {
+            display: block; /* Make links block elements */
+            padding: 10px; /* Add some padding */
+            color: #333; /* Text color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .profile-options a:hover {
+            background-color: #f0f0f0; /* Change background on hover */
+        }
+
+        .profile {
+            position: relative; /* Relative position for dropdown placement */
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Side Navigation Bar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>University Dashboard</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#impact-analytics">AI-Powered Alumni Impact Analytics</a></li>
+                    <li><a href="#event-personalization">Dynamic Event Personalization</a></li>
+                    <li><a href="#donation-forecasting">Automated Donation Forecasting</a></li>
+                    <li><a href="#sentiment-analysis">Real-Time Sentiment Analysis</a></li>
+                    <li><a href="#collaboration-platform">Integrated Alumni-Student Collaboration Platform</a></li>
+                    <li><a href="#historical-archive">Interactive Historical Archive</a></li>
+                    <li><a href="#donation-portal">Donation Portal</a></li>
+                    <li><a href="#engagement-score">Alumni Engagement Score Dashboard</a></li>
+                    <li><a href="#virtual-board">Virtual Alumni Advisory Board</a></li>
+                    <li><a href="#data-driven">Data-Driven Program Development</a></li>
+                    <li><a href="#donor-recognition">Enhanced Donor Recognition System</a></li>
+                    <li><a href="#mentorship-analytics">Alumni Mentorship Analytics</a></li>
+                    <li><a href="#gamified-engagement">Gamified Engagement Initiatives</a></li>
+                    <li><a href="#local-business">Collaboration with Local Businesses</a></li>
+                    <li><a href="#career-fair">Integrated Career Fair Platform</a></li>
+                    <li><a href="#impact-stories">Alumni Impact Stories Hub</a></li>
+                    <li><a href="#feedback-loop">Continuous Feedback Loop</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <header class="content-header">
+                <h1>Welcome to the University Dashboard</h1>
+                <div class="profile">
+                    <img src="profile.jpeg" alt="Profile Picture" onclick="toggleProfileOptions()">
+                    <div class="profile-info">
+                        <p>Vishnu</p>
+                        <p>Administrator</p>
+                    </div>
+                    <div class="profile-options" id="profileOptions">
+                        <a href="#">View Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- University Alumni Overview Section -->
+            <section class="overview-section">
+                <h2>University Alumni Overview</h2>
+                <div class="overview-container">
+                    <p>The university has a rich history of alumni who have gone on to make significant contributions in various fields. This overview highlights their impact, achievements, and ongoing engagement with the university.</p>
+                    <ul>
+                        <li>Total Alumni: 25,000</li>
+                        <li>Active Donors: 3,500</li>
+                        <li>Alumni in Leadership Roles: 1,200</li>
+                        <li>Countries Represented: 50+</li>
+                        <li>Top Industries: Technology, Healthcare, Finance</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="university.js"></script>
+    <script>
+        function toggleProfileOptions() {
+            const options = document.getElementById('profileOptions');
+            options.style.display = options.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.profile img')) {
+                const dropdowns = document.getElementsByClassName('profile-options');
+                for (let i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

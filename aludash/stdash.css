@@ -1,0 +1,221 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: auto;
+    background-color: rgba(30, 42, 94, 0.9);
+    
+    color: #E1D7B7;;
+    padding: 20px;
+    position: relative;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: center;
+    background-color: #55679C;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-nav {
+    display: block;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    margin: 15px 0;
+}
+
+.sidebar-nav a {
+    color: #E1D7B7;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+/* Sidebar Navigation */
+.sidebar-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #ffffff; /* Default text color */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-nav ul li a:hover {
+    background-color: #3b5998; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+}
+
+.sidebar-nav ul li a.active {
+    background-color: #4a76a8; /* Background color when active */
+    color: #ffffff; /* Text color when active */
+}
+
+/* Optional: to make sure the first item is active by default */
+.sidebar-nav ul li:first-child a {
+    color: #ffffff;
+}
+
+.sidebar-nav a i {
+    margin-right: 10px;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #57585812;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: #55679C; /* Added background color */
+    padding: 15px; /* Optional padding for spacing */
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-right: 10px;
+}
+
+.profile-info h3 {
+    margin: 0;
+    color: #E1D7B7;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown li a {
+    color: #2c3e50;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown li a i {
+    margin-right: 10px;
+}
+
+.dropdown li:last-child {
+    border-bottom: none;
+}
+
+.profile-section:hover .dropdown {
+    display: block;
+}
+
+.student-feed {
+    margin-top: 20px;
+}
+
+.feed-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feed-item h3 {
+    margin: 0;
+    color: #2980b9;
+}
+
+.feed-item p {
+    margin: 5px 0 0;
+    color: #34495e;
+}
+
+/* Optional responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    .content {
+        padding: 15px;
+    }
+}
+
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: rgba(236, 240, 241, 0.238); /* Adds a semi-transparent background to the content */
+    position: relative; /* Position the content relative to the blurred background */
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('student.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(1px); /* Adjust the blur level as needed */
+    z-index: -1; /* Send the blurred image behind the content */
+    opacity: 0.7; /* Adjust opacity for a softer effect */
+}

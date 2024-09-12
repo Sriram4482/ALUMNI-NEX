@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Development Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1c1c;
+            margin: 0;
+            padding: 0;
+        }
+
+        .tracker-container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #227daf;
+        }
+
+        .skill-category {
+            margin-bottom: 40px;
+        }
+
+        .skill-category h2 {
+            border-bottom: 2px solid #227daf;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .skill-item h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .progress-bar {
+            background-color: #232424;
+            border-radius: 5px;
+            width: 60%;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .progress-bar div {
+            height: 20px;
+            background-color: #227daf;
+            border-radius: 5px;
+            width: 50%; /* Progress percentage */
+            transition: width 0.5s ease-in-out;
+        }
+
+        .progress-bar span {
+            position: absolute;
+            right: 10px;
+            top: 2px;
+            color: #fff;
+            font-size: 0.9em;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #227daf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1a5b86;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tracker-container">
+        <h1>Skill Development Tracker</h1>
+
+        <!-- Skill Category: Technical Skills -->
+        <section class="skill-category">
+            <h2>Technical Skills</h2>
+            <div class="skill-item">
+                <h3>JavaScript</h3>
+                <div class="progress-bar">
+                    <div style="width: 75%;"></div> <!-- Progress percentage -->
+                    <span>75%</span>
+                </div>
+                <button>Update</button>
+            </div>
+            <div class="skill-item">
+                <h3>Python</h3>
+                <div class="progress-bar">
+                    <div style="width: 60%;"></div>
+                    <span>60%</span>
+                </div>
+                <button>Update</button>
+            </div>
+        </section>
+
+        <!-- Skill Category: Soft Skills -->
+        <section class="skill-category">
+            <h2>Soft Skills</h2>
+            <div class="skill-item">
+                <h3>Communication</h3>
+                <div class="progress-bar">
+                    <div style="width: 80%;"></div>
+                    <span>80%</span>
+                </div>
+                <button>Update</button>
+            </div>
+            <div class="skill-item">
+                <h3>Teamwork</h3>
+                <div class="progress-bar">
+                    <div style="width: 90%;"></div>
+                    <span>90%</span>
+                </div>
+                <button>Update</button>
+            </div>
+        </section>
+
+        <!-- Skill Category: Languages -->
+        <section class="skill-category">
+            <h2>Languages</h2>
+            <div class="skill-item">
+                <h3>English</h3>
+                <div class="progress-bar">
+                    <div style="width: 85%;"></div>
+                    <span>85%</span>
+                </div>
+                <button>Update</button>
+            </div>
+            <div class="skill-item">
+                <h3>Spanish</h3>
+                <div class="progress-bar">
+                    <div style="width: 50%;"></div>
+                    <span>50%</span>
+                </div>
+                <button>Update</button>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>

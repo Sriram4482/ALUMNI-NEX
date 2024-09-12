@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Role</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start; 
+            align-items: center;
+            height: 100vh;
+            background: url('board.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .selection-wrapper {
+            text-align: left; 
+            color: white;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            margin-left: 50px; 
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            letter-spacing: 1.5px;
+        }
+
+        p {
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+
+        .role-selection {
+            display: flex;
+            flex-direction: column; 
+        }
+
+        .role-selection button {
+            background-color: #ff8c00;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            margin: 10px 0; 
+            font-size: 1.5em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            outline: none;
+        }
+
+        .role-selection button:hover {
+            background-color: #ff6500;
+            transform: scale(1.1);
+        }
+
+        .role-selection button:active {
+            animation: blink 0.2s 3;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="selection-wrapper">
+        <h1>Welcome to the Alumni Platform</h1>
+        <p>Please select your role to proceed:</p>
+        <div class="role-selection">
+            <button onclick="selectRole('student')">Student</button>
+            <button onclick="selectRole('alumni')">Alumni</button>
+            <button onclick="selectRole('university')">University/College</button>
+        </div>
+    </div>
+
+    <script>
+        function selectRole(role) {
+            localStorage.setItem('userRole', role);
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Virtual Internship Portal</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #282626;
+            color: #474141;
+            overflow-x: hidden;
+        }
+
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #3c3a3a;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .dashboard-header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #227daf;
+        }
+
+        .dashboard-section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            margin: 0 0 10px 0;
+            cursor: pointer;
+            padding: 15px;
+            background-color:#227daf;
+            color: white;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+            transition: max-height 0.3s ease-in-out;
+            overflow: hidden;
+            max-height: 0;
+        }
+
+        .section-content.show {
+            display: block;
+            max-height: 1000px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #227daf;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #227daf;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.5em;
+        }
+
+        .card p {
+            margin: 0 0 10px 0;
+        }
+
+        .internship-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .timeline {
+            list-style: none;
+            padding: 0;
+        }
+
+        .timeline li {
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .timeline li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+        }
+
+        .section-content img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>Virtual Internship Portal</h1>
+        </div>
+
+        <!-- Internship Listings Section -->
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('internshipListings')">
+                Internship Listings
+                <span>&#9660;</span>
+            </div>
+            <div id="internshipListings" class="section-content">
+                <p>Explore a variety of virtual internships in different industries, roles, and skill levels.</p>
+                <div class="internship-grid">
+                    <div class="card">
+                        <h3>Software Engineering Intern</h3>
+                        <p>Company: Tech Innovators</p>
+                        <p>Duration: 6 months</p>
+                        <p>Stipend: $1000/month</p>
+                        <a href="#" class="button">Apply Now</a>
+                    </div>
+                    <div class="card">
+                        <h3>Marketing Intern</h3>
+                        <p>Company: MarketGurus</p>
+                        <p>Duration: 3 months</p>
+                        <p>Stipend: $500/month</p>
+                        <a href="#" class="button">Apply Now</a>
+                    </div>
+                    <!-- Add more internship cards as needed -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Application Tracker Section -->
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('applicationTracker')">
+                Application Tracker
+                <span>&#9660;</span>
+            </div>
+            <div id="applicationTracker" class="section-content">
+                <p>Track the status of your internship applications with real-time updates.</p>
+                <ul class="timeline">
+                    <li>
+                        <strong>Software Engineering Intern at Tech Innovators</strong> - Applied
+                    </li>
+                    <li>
+                        <strong>Marketing Intern at MarketGurus</strong> - Interview Scheduled
+                    </li>
+                    <!-- Add more application statuses as needed -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Internship Matching Tool Section -->
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('internshipMatching')">
+                Internship Matching Tool
+                <span>&#9660;</span>
+            </div>
+            <div id="internshipMatching" class="section-content">
+                <p>Get personalized internship recommendations based on your skills, interests, and academic background.</p>
+                <a href="#" class="button">View Your Matches</a>
+            </div>
+        </div>
+
+        <!-- Virtual Internship Experiences Section -->
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('internshipExperiences')">
+                Virtual Internship Experiences
+                <span>&#9660;</span>
+            </div>
+            <div id="internshipExperiences" class="section-content">
+                <p>Read testimonials and success stories from students who have completed virtual internships.</p>
+                <img src="https://via.placeholder.com/800x400" alt="Internship Experience">
+                <p>"My virtual internship with Tech Innovators was an amazing experience! I learned so much and was able to apply my skills in real-world projects." - Jane Doe</p>
+            </div>
+        </div>
+
+        <!-- Mentorship and Networking Section -->
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('mentorshipNetworking')">
+                Mentorship and Networking
+                <span>&#9660;</span>
+            </div>
+            <div id="mentorshipNetworking" class="section-content">
+                <p>Connect with industry professionals for mentorship and join virtual networking events.</p>
+                <a href="#" class="button">Find a Mentor</a>
+                <a href="#" class="button">Join Networking Events</a>
+            </div>
+        </div>
+
+        <!-- Skill-Building Resources Section -->
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('skillBuilding')">
+                Skill-Building Resources
+                <span>&#9660;</span>
+            </div>
+            <div id="skillBuilding" class="section-content">
+                <p>Access online courses, webinars, and tools to develop the skills needed for your internships.</p>
+                <a href="#" class="button">Explore Resources</a>
+            </div>
+        </div>
+
+        <!-- Virtual Workspace Section -->
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('virtualWorkspace')">
+                Virtual Workspace
+                <span>&#9660;</span>
+            </div>
+            <div id="virtualWorkspace" class="section-content">
+                <p>Collaborate with your internship team in a dedicated virtual workspace with tools for meetings, chat, and document sharing.</p>
+                <a href="#" class="button">Enter Workspace</a>
+            </div>
+        </div>
+
+        <!-- Internship Feedback and Evaluation Section -->
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('internshipFeedback')">
+                Internship Feedback and Evaluation
+                <span>&#9660;</span>
+            </div>
+            <div id="internshipFeedback" class="section-content">
+                <p>Receive feedback from your internship supervisors and evaluate your experience.</p>
+                <a href="#" class="button">View Feedback</a>
+            </div>
+        </div>
+
+        <!-- Certification and Badges Section -->
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('certificationBadges')">
+                Certification and Badges
+                <span>&#9660;</span>
+            </div>
+            <div id="certificationBadges" class="section-content">
+                <p>Earn digital certificates and badges upon successful completion of internships.</p>
+                <a href="#" class="button">View Your Achievements</a>
+            </div>
+        </div>
+
+        <!-- FAQs and Support Section -->
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('faqSupport')">
+                FAQs and Support
+                <span>&#9660;</span>
+            </div>
+            <div id="faqSupport" class="section-content">
+                <p>Find answers to common questions and get support for any issues related to your virtual internships.</p>
+                <a href="#" class="button">Get Support</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSectionContent(sectionId) {
+            const content = document.getElementById(sectionId);
+            const allContents = document.querySelectorAll('.section-content');
+            allContents.forEach((element) => {
+                if (element !== content) {
+                    element.classList.remove('show');
+                }
+            });
+            content.classList.toggle('show');
+        }
+    </script>
+</body>
+
+</html>

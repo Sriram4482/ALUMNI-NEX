@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Finder</title>
+    <link rel="stylesheet" href="scholarship.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Scholarship Finder</h1>
+            <p>Find the best scholarships tailored for you.</p>
+        </header>
+
+        <!-- Search and Filter Section -->
+        <section class="search-filter">
+            <input type="text" id="search" placeholder="Search for scholarships..." class="search-bar">
+            <div class="filters">
+                <select id="eligibility" class="filter">
+                    <option value="">Eligibility</option>
+                    <option value="undergraduate">Undergraduate</option>
+                    <option value="postgraduate">Postgraduate</option>
+                </select>
+                <select id="field-of-study" class="filter">
+                    <option value="">Field of Study</option>
+                    <option value="stem">STEM</option>
+                    <option value="arts">Arts</option>
+                    <option value="business">Business</option>
+                </select>
+                <select id="scholarship-type" class="filter">
+                    <option value="">Scholarship Type</option>
+                    <option value="merit">Merit-based</option>
+                    <option value="need">Need-based</option>
+                    <option value="minority">Minority-based</option>
+                </select>
+                <select id="country-region" class="filter">
+                    <option value="">Country/Region</option>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                    <option value="canada">Canada</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Scholarship List -->
+        <section class="scholarship-list">
+            <h2>Available Scholarships</h2>
+            <div class="scholarship-item">
+                <h3>Global Merit Scholarship</h3>
+                <p><strong>Eligibility:</strong> Undergraduate, STEM</p>
+                <p><strong>Country:</strong> USA</p>
+                <button class="details-btn" onclick="showDetails()">View Details</button>
+            </div>
+            <div class="scholarship-item">
+                <h3>International Business Leaders Scholarship</h3>
+                <p><strong>Eligibility:</strong> Postgraduate, Business</p>
+                <p><strong>Country:</strong> UK</p>
+                <button class="details-btn" onclick="showDetails()">View Details</button>
+            </div>
+            <!-- Add more scholarships as needed -->
+        </section>
+
+        <!-- Scholarship Details Section -->
+        <section class="scholarship-details" id="scholarship-details">
+            <h2>Scholarship Details</h2>
+            <div class="details-content">
+                <h3 id="scholarship-name">Scholarship Name</h3>
+                <p id="scholarship-description">Description of the scholarship goes here...</p>
+                <p><strong>Eligibility:</strong> <span id="scholarship-eligibility">Eligibility criteria...</span></p>
+                <p><strong>Application Process:</strong> <span id="application-process">Application process details...</span></p>
+                <p><strong>Deadline:</strong> <span id="scholarship-deadline">Date...</span></p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+        </section>
+
+        <!-- Application Tracker Section -->
+        <section class="application-tracker">
+            <h2>Application Tracker</h2>
+            <p>Track your scholarship applications here.</p>
+            <ul>
+                <li>Global Merit Scholarship - Status: Pending</li>
+                <li>International Business Leaders Scholarship - Status: Submitted</li>
+                <!-- Add more tracked applications as needed -->
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

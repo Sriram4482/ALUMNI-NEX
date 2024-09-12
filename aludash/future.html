@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Career Path Suggestions</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #161515;
+            color: #333;
+        }
+
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #504e4e;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .dashboard-header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #090c0f;
+        }
+
+        .dashboard-section {
+            margin-bottom: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            margin: 0 0 10px 0;
+            padding: 10px;
+            background-color: #295473;
+            color: white;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .section-title:hover {
+            background-color: #100f0e;
+        }
+
+        .section-title .icon {
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+
+        .section-content {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #ecf0f1;
+        }
+
+        .section-content p {
+            margin: 0 0 10px 0;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #295473;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #295473;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-header h1 {
+                font-size: 1.8em;
+            }
+
+            .section-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>Career Path Suggestions</h1>
+        </div>
+
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('personalizedRecommendations')">
+                Personalized Career Recommendations
+                <span id="icon-personalizedRecommendations" class="icon">&#9660;</span>
+            </div>
+            <div id="personalizedRecommendations" class="section-content">
+                <p>Based on your academic performance, interests, and skills, we have generated personalized career
+                    paths tailored just for you.</p>
+                <a href="#" class="button">View Your Recommendations</a>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('skillAssessment')">
+                Skill Assessment Tools
+                <span id="icon-skillAssessment" class="icon">&#9660;</span>
+            </div>
+            <div id="skillAssessment" class="section-content">
+                <p>Evaluate your current skill levels with our interactive tools, including quizzes, coding challenges,
+                    and more.</p>
+                <a href="#" class="button">Start Assessment</a>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('careerPathExplorer')">
+                Career Path Explorer
+                <span id="icon-careerPathExplorer" class="icon">&#9660;</span>
+            </div>
+            <div id="careerPathExplorer" class="section-content">
+                <p>Explore different career paths related to your major. Discover the required skills, average salaries,
+                    and potential job roles.</p>
+                <a href="#" class="button">Explore Careers</a>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('industryInsights')">
+                Industry Insights
+                <span id="icon-industryInsights" class="icon">&#9660;</span>
+            </div>
+            <div id="industryInsights" class="section-content">
+                <p>Stay informed with up-to-date industry trends, in-demand skills, and job market data.</p>
+                <a href="#" class="button">Get Insights</a>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('alumniStories')">
+                Alumni Success Stories
+                <span id="icon-alumniStories" class="icon">&#9660;</span>
+            </div>
+            <div id="alumniStories" class="section-content">
+                <p>Read inspiring stories from alumni who have successfully pursued various career paths after
+                    graduation.</p>
+                <a href="#" class="button">Read Stories</a>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('mentorshipProgram')">
+                Mentorship Program
+                <span id="icon-mentorshipProgram" class="icon">&#9660;</span>
+            </div>
+            <div id="mentorshipProgram" class="section-content">
+                <p>Connect with mentors in your chosen field who can provide guidance and advice on your career journey.
+                </p>
+                <a href="#" class="button">Find a Mentor</a>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('internshipJobs')">
+                Internship and Job Opportunities
+                <span id="icon-internshipJobs" class="icon">&#9660;</span>
+            </div>
+            <div id="internshipJobs" class="section-content">
+                <p>Discover internships and entry-level job opportunities tailored to your career path.</p>
+                <a href="#" class="button">Search Opportunities</a>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('careerWorkshops')">
+                Career Development Workshops
+                <span id="icon-careerWorkshops" class="icon">&#9660;</span>
+            </div>
+            <div id="careerWorkshops" class="section-content">
+                <p>Participate in workshops, seminars, and courses that help you develop skills relevant to your desired
+                    career paths.</p>
+                <a href="#" class="button">View Upcoming Workshops</a>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('certificationsCourses')">
+                Certifications and Courses
+                <span id="icon-certificationsCourses" class="icon">&#9660;</span>
+            </div>
+            <div id="certificationsCourses" class="section-content">
+                <p>Explore certifications and online courses that align with your career goals.</p>
+                <a href="#" class="button">Find Courses</a>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('resumeInterviewPrep')">
+                Resume and Interview Preparation
+                <span id="icon-resumeInterviewPrep" class="icon">&#9660;</span>
+            </div>
+            <div id="resumeInterviewPrep" class="section-content">
+                <p>Access resources and tools to build your resume, prepare for interviews, and apply for jobs.</p>
+                <a href="#" class="button">Start Preparing</a>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <div class="section-title" onclick="toggleSectionContent('peerDiscussion')">
+                Peer Discussion Forum
+                <span id="icon-peerDiscussion" class="icon">&#9660;</span>
+            </div>
+            <div id="peerDiscussion" class="section-content">
+                <p>Join discussions with peers about career paths, job hunting tips, and more.</p>
+                <a href="#" class="button">Join the Forum</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSectionContent(sectionId) {
+            const content = document.getElementById(sectionId);
+            const icon = document.getElementById(`icon-${sectionId}`);
+            const isVisible = content.style.display === "block";
+            content.style.display = isVisible ? "none" : "block";
+            icon.style.transform = isVisible ? "rotate(0deg)" : "rotate(180deg)";
+        }
+    </script>
+</body>
+
+</html>

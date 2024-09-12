@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Student Feed</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b6ab7700;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            background-color: #2372a7;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Announcements Section */
+        .announcement-section,
+        .course-updates-section,
+        .student-activities-section {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .announcement-section h3,
+        .course-updates-section h3,
+        .student-activities-section h3 {
+            margin-top: 0;
+        }
+
+        .announcement {
+            background-color: #98c6eccf;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #2372a7;
+        }
+
+        /* Course Updates Section */
+        .course-updates-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .course-updates-section li {
+            background-color: #98c6eccf;
+            margin-bottom: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #2372a7;
+        }
+
+        /* Student Activities Section */
+        .student-activities-section .activity {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #98c6eccf;
+            border-radius: 5px;
+            border-left: 4px solid #2372a7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .student-activities-section .activity button {
+            padding: 5px 10px;
+            background-color: #2372a7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .student-activities-section .activity button:hover {
+            background-color: #2372a7;
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url('ruben.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px);
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 50px 20px; /* Adequate padding */
+            font-size: 24px;
+            max-width: 100%; /* Ensure content width stays within viewport */
+        }
+        
+        img {
+            max-width: 100%; /* Ensure images do not cause overflow */
+            height: auto;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Student Feed</h2>
+
+        <!-- Announcements Section -->
+        <div class="announcement-section">
+            <h2>Announcements</h2>
+            <div class="announcement">
+                <h3>University News</h3>
+                <p>Mid-term exams will start from October 10th. Please check your exam schedule.</p>
+            </div>
+            <div class="announcement">
+                <h3>Department Notices</h3>
+                <p>Lab sessions for the 3rd year are rescheduled to Fridays at 2 PM.</p>
+            </div>
+        </div>
+
+        <!-- Course Updates Section -->
+        <div class="course-updates-section">
+            <h2>Course Updates</h2>
+            <ul>
+                <li>Assignment 3 due date: October 5th</li>
+                <li>New lecture notes uploaded for "Machine Learning Basics"</li>
+                <li>Exam schedule for Semester 5 has been released.</li>
+            </ul>
+        </div>
+
+        <!-- Student Activities Section -->
+        <div class="student-activities-section">
+            <h2>Student Activities</h2>
+            <div class="activity">
+                <p>Join the coding hackathon on September 20th.</p>
+                <button onclick="joinActivity()">Join</button>
+            </div>
+            <div class="activity">
+                <p>Enroll in the new AI workshop starting October 1st.</p>
+                <button onclick="joinActivity()">Enroll</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // JavaScript function to handle activity actions
+        function joinActivity() {
+            alert("You have successfully joined the activity!");
+        }
+    </script>
+</body>
+
+</html>

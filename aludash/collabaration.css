@@ -1,0 +1,81 @@
+/* peerCollaborationHub.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3e3c3c; /* Change to desired background color */
+    margin: 0;
+    padding: 0;
+    color: #0f1111;
+    overflow: hidden; /* Prevent overflow of the blurred background */
+}
+
+.hub-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-height: 80vh; /* Limit height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.hub-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hub-header h1 {
+    font-size: 2.5em;
+    color: #101213;
+    margin-bottom: 10px;
+}
+
+.hub-header p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 1.8em;
+    color: #0f1112;
+    border-bottom: 2px solid #101112;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.matchmaking-tools, .chat-tools, .workspace-tools, .task-tools, 
+.feedback-tools, .forum-tools, .skill-resources, .whiteboard-tools, 
+.analytics-tools, .calendar-tools {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0c0d0e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #121314;
+}
+
+button i {
+    margin-right: 8px;
+}
