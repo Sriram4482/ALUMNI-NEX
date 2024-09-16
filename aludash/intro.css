@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111; /* Dark background */
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.intro-container {
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.website-name {
+    font-size: 4em; /* Big font size */
+    letter-spacing: 0.2em;
+    position: relative;
+    color: transparent;
+    background: linear-gradient(90deg, #e91e63, #2196f3, #ffeb3b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 200% 100%;
+    animation: gradientAnimation 4s ease-in-out, fadeInText 2s forwards;
+}
+
+/* Animate the gradient to move across the text */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Fade in the text effect */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
